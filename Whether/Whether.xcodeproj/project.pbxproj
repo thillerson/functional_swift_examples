@@ -12,6 +12,8 @@
 		EA0FA68219942B8700964306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0FA68019942B8700964306 /* Main.storyboard */; };
 		EA0FA68419942B8700964306 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0FA68319942B8700964306 /* Images.xcassets */; };
 		EA0FA69019942B8700964306 /* WhetherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FA68F19942B8700964306 /* WhetherTests.swift */; };
+		EA0FA69A19942DDE00964306 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FA69919942DDE00964306 /* Alamofire.swift */; };
+		EAC547E31999689D00EE4E7B /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC547E21999689D00EE4E7B /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		EA0FA68919942B8700964306 /* WhetherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhetherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0FA68E19942B8700964306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0FA68F19942B8700964306 /* WhetherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhetherTests.swift; sourceTree = "<group>"; };
+		EA0FA69919942DDE00964306 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = ../../Alamofire/Source/Alamofire.swift; sourceTree = "<group>"; };
+		EAC547E21999689D00EE4E7B /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +79,10 @@
 		EA0FA67919942B8700964306 /* Whether */ = {
 			isa = PBXGroup;
 			children = (
+				EA0FA69919942DDE00964306 /* Alamofire.swift */,
 				EA0FA67C19942B8700964306 /* AppDelegate.swift */,
 				EA0FA67E19942B8700964306 /* ViewController.swift */,
+				EAC547E21999689D00EE4E7B /* WeatherCell.swift */,
 				EA0FA68019942B8700964306 /* Main.storyboard */,
 				EA0FA68319942B8700964306 /* Images.xcassets */,
 				EA0FA67A19942B8700964306 /* Supporting Files */,
@@ -208,6 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC547E31999689D00EE4E7B /* WeatherCell.swift in Sources */,
+				EA0FA69A19942DDE00964306 /* Alamofire.swift in Sources */,
 				EA0FA67F19942B8700964306 /* ViewController.swift in Sources */,
 				EA0FA67D19942B8700964306 /* AppDelegate.swift in Sources */,
 			);
@@ -397,6 +405,7 @@
 				EA0FA69519942B8700964306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA0FA69619942B8700964306 /* Build configuration list for PBXNativeTarget "WhetherTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +414,7 @@
 				EA0FA69819942B8700964306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
