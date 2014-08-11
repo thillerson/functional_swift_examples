@@ -50,11 +50,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     collectionView.reloadData()
   }
   
+  // MARK: Transforms
+  
+  /**
+    Transform a zip code string into a Yahoo weather request
+  */
   func zipToRequest(zip:String) -> NSURLRequest {
     let earl = NSURL(string: "http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item%20from%20weather.forecast%20where%20location%3D%27\(zip)%27");
     return NSURLRequest(URL: earl)
   }
   
+  /**
+    Transform an NSURLRequest into a JSON NSDictionary. Could be improved to handle errors better
+  */
   func requestToJSON(request:NSURLRequest) -> NSDictionary {
     var response: NSURLResponse?
     var error: NSErrorPointer = nil
@@ -63,6 +71,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     return json
   }
   
+  /**
+    Transform Yahoo Weather json dictionary into a weather description
+  */
   func jsonToWeatherDescription(json:NSDictionary) -> String {
     let query = json["query"] as NSDictionary
     let results = query["results"] as NSDictionary
