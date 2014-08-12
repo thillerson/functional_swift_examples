@@ -72,7 +72,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
   }
   
   /**
-    Transform Yahoo Weather json dictionary into a weather description
+    Transform Yahoo Weather json dictionary into a weather description. Could be improved to handle errors better
   */
   func jsonToWeatherDescription(json:NSDictionary) -> String {
     let query = json["query"] as NSDictionary
