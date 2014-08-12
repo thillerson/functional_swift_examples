@@ -39,7 +39,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         .map { zip, json -> (String, String) in
           return (zip, self.jsonToWeatherDescription(json))
-        }
+      }
+      
+      /* Terse form. Weirder, but more readable in another sense...
+      let results =
+        self.zips
+          .map { ( $0, self.zipToRequest($0) ) }
+          .map { ( $0.0, self.requestToJSON($0.1)) }
+          .map { ( $0.0, self.jsonToWeatherDescription($0.1) ) }
+      */
       
       dispatch_async(dispatch_get_main_queue(), { self.displayWeather(results) })
     }
