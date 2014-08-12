@@ -12,7 +12,7 @@ func appendSeparator(separator:String)(string:String) -> String {
 
 // Partial Application, deriving a new function by applying a subset of arguments to a function:
 let appendNewlineTo:(String) -> String = appendSeparator("\n")
-let appendCommaTo:(String) -> String = appendSeparator(",")
+let appendCommaTo:(String) -> String = appendSeparator(", ")
 
 let sentence = lines.reduce("") { $0 + appendCommaTo($1) }
 let stanza   = lines.reduce("") { $0 + appendNewlineTo($1) }
